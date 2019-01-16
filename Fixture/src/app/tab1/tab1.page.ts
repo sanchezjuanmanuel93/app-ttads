@@ -14,7 +14,6 @@ export class Tab1Page {
   constructor(private groupsService: GroupsService) {
     this.groupsService.getGroups().subscribe((groups) => {
       this.groups = groups;
-      console.log(groups);
     })
   }
 }
