@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GroupsService } from '../services/groups.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-group',
@@ -8,46 +9,24 @@ import { GroupsService } from '../services/groups.service';
 })
 export class GroupPage {
 
-  private group: any;
-  private teams: any;
-  private matches: any;
 
-  constructor(private groupsService: GroupsService) {
-    /*this.groupsService.getGroup(param id).subscribe((group) => {
+  group: any;
+
+
+  constructor(
+    private groupsService: GroupsService,
+    private route: ActivatedRoute
+  ) {
+
+    this.getGroups();
+
+  }
+
+  getGroups() {
+    let id = this.route.snapshot.paramMap.get('id');
+    this.groupsService.getGroup(id).subscribe(group => {
       this.group = group;
-    })*/
-    this.group = {
-      name: "Group name",
-    }
-
-    this.teams = [
-      {
-        name: "team 1"
-      },
-      {
-        name: "team 2"
-      },
-      {
-        name: "team 3"
-      },
-    ];
-
-    this.matches = [
-      {
-        id: 1,
-        score1: 1,
-        score2: 0,
-        team1: {
-          code: "A",
-          name: "Argentina",
-        },
-        team2: {
-          code: "B",
-          name: "Brasil",
-        }
-      }
-    ]
-
+    });
   }
 
 }

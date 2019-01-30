@@ -8,7 +8,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item href="/group" *ngFor="let group of groups">
+    <ion-item *ngFor="let group of groups" [routerLink]="'/group/' + group.id" routerDirection="forward">
       <ion-icon slot="start" color="medium" name="book"></ion-icon>
       <ion-label>{{group.name}}</ion-label>
     </ion-item>

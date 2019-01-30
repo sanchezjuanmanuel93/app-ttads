@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatchesService } from '../services/matches.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-match',
@@ -7,43 +9,21 @@ import { Component } from '@angular/core';
 })
 export class MatchPage {
 
-  private team1: any;
-  private team2: any;
-  private goals1: any;
-  private goals2: any;
+  private match: any;
 
-  constructor() {
-    this.team1 = {
-      code: "A",
-      name: "Argentina",
-    };
-    this.team2 = {
-      code: "B",
-      name: "Brasil",
-    };
+  constructor(
+    private route: ActivatedRoute,
+    private matchesService: MatchesService
+  ) {
 
-    this.goals1 = [
-      {
-        time: "87",
-        player: {
-          name: "PLAYER UNO"
-        },
-      },
-    ];
-    this.goals2 = [
-      {
-        time: "17",
-        player: {
-          name: "PLAYER TRES"
-        },
-      },
-      {
-        time: "87",
-        player: {
-          name: "PLAYER DOS"
-        },
-      },
-    ];
+    this.getMatches();
+
   }
 
+  getMatches() {
+    let id_match = this.route.snapshot.paramMap.get('id');
+    this.matchesService.getMatch(id_match).subscribe(match => {
+      this.match = match;
+    })
+  }
 }

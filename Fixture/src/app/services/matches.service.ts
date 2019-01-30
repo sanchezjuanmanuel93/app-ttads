@@ -5,17 +5,18 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class GroupsService {
+export class MatchesService {
 
-  private url = environment.UrlApi + "group";
+  private url = environment.UrlApi + "match";
 
-  constructor(private http: HttpClient) { }
 
-  getGroups() {
-    return this.http.get(this.url);
+  constructor(private http: HttpClient) {
+
   }
 
-  getGroup(id: any) {
+  getMatch(id: any) {
     return this.http.get(this.url + "/" + id);
   }
+
+
 }

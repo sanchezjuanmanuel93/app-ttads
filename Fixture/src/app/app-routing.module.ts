@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', loadChildren: './groups/groups.module#GroupsPageModule' },
-  { path: 'group', loadChildren: './group/group.module#GroupPageModule' },
-  { path: 'match', loadChildren: './match/match.module#MatchPageModule' },
+  { path: 'group/:id', loadChildren: './group/group.module#GroupPageModule' },
+  { path: 'match/:id', loadChildren: './match/match.module#MatchPageModule' },
   { path: 'groups', loadChildren: './groups/groups.module#GroupsPageModule' }
 
 ];
