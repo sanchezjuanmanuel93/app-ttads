@@ -10,10 +10,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { GroupsService } from './services/groups.service';
+import { ScoreComponent } from './score/score.component';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ScoreComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [

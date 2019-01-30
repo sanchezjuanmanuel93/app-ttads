@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{group.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-label>Equipos</ion-label>
+  <ion-item *ngFor="let team of teams">
+    <ion-icon slot="start" color="medium" name="book"></ion-icon>
+    <ion-label>{{team.name}}</ion-label>
+  </ion-item>
+
+  <ion-label>Partidos</ion-label>
+    <app-score *ngFor="let match of matches" [match]="match"></app-score>
+</ion-content>

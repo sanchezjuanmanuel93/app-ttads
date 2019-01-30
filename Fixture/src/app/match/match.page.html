@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{team1.name}} - {{team2.name}} </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div className="match-details">
+    <div>
+      <h2>{{team1.name}}({{goals1.length}})</h2>
+      <span *ngFor="let goal of goals1"><b>{{goal.player.name}}</b> {{goal.time}}&apos;</span>
+    </div>
+    <div>
+      <h2>{{team2.name}}({{goals2.length}})</h2>
+      <span *ngFor="let goal of goals2"><b>{{goal.player.name}}</b> {{goal.time}}&apos;</span>
+    </div>
+  </div>
+</ion-content>
