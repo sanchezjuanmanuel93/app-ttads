@@ -9,9 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class GroupPage {
 
-
   group: any;
-
 
   constructor(
     private groupsService: GroupsService,

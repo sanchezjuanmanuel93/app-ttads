@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5be0a10a4aee9d1d5204881e"},"player":{"$oid":"5be09bdc4aee9d1d5204881c"},"date":"50","createdAt":1.541447946667e+12,"updatedAt":1.541448860182e+12,"time":"50"}
+{"_id":{"$oid":"5be0a17d4aee9d1d52048820"},"player":{"$oid":"5be09be94aee9d1d5204881d"},"date":"55","createdAt":1.541448061585e+12,"updatedAt":1.541448061585e+12,"time":""}

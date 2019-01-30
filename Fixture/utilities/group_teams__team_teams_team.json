@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5be0995d4aee9d1d52048819"},"group_teams":{"$oid":"5be097b44aee9d1d52048814"},"team_teams_team":{"$oid":"5be097d34aee9d1d52048815"}}
+{"_id":{"$oid":"5be0997c4aee9d1d5204881a"},"group_teams":{"$oid":"5be097b44aee9d1d52048814"},"team_teams_team":{"$oid":"5be097d54aee9d1d52048816"}}
+{"_id":{"$oid":"5c512aa5ad5f4d174e6fbbf9"},"group_teams":{"$oid":"5be097ac4aee9d1d52048812"},"team_teams_team":{"$oid":"5be097d34aee9d1d52048815"}}
+{"_id":{"$oid":"5c51322fad5f4d174e6fbbfa"},"group_teams":{"$oid":"5be097ac4aee9d1d52048812"},"team_teams_team":{"$oid":"5be097d54aee9d1d52048816"}}
