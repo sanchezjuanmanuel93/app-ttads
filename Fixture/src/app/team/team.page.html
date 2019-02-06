@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{team.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-label>Equipos</ion-label>
+  <ion-item *ngFor="let player of team.players">
+    <ion-icon slot="start" color="medium" name="book"></ion-icon>
+    <ion-label>{{player.name}}</ion-label>
+  </ion-item>
+</ion-content>
