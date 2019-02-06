@@ -9,7 +9,7 @@
 
 <ion-content padding>
   <ion-label>Equipos</ion-label>
-  <ion-item *ngFor="let team of group.teams">
+  <ion-item *ngFor="let team of group.teams" [routerLink]="'/team/' + team.id" routerDirection="forward">
     <ion-icon slot="start" color="medium" name="book"></ion-icon>
     <ion-label>{{team.name}}</ion-label>
   </ion-item>
