@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
+import { Group } from '../models/group';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,5 +19,9 @@ export class GroupsService {
 
   getGroup(id: any) {
     return this.http.get(this.url + "/" + id);
+  }
+
+  save(group: Group) {
+    return this.http.post(this.url, group);
   }
 }

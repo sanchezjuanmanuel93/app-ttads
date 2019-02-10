@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { GroupsPage } from './groups.page';
+import { AddGroupComponent } from './add-group/add-group.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [GroupsPage]
+  declarations: [GroupsPage, AddGroupComponent]
 })
-export class GroupsPageModule {}
+export class GroupsPageModule { }

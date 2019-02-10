@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { GroupPage } from './group.page';
-import { ScoreComponent } from '../score/score.component';
+import { ScoreComponent } from 'src/app/score/score.component';
 
 const routes: Routes = [
   {

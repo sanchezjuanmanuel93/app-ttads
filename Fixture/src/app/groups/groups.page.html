@@ -10,8 +10,13 @@
   <ion-list>
     <ion-item *ngFor="let group of groups" [routerLink]="'/group/' + group.id" routerDirection="forward">
       <ion-icon slot="start" color="medium" name="book"></ion-icon>
-      <ion-label>{{group.name}}</ion-label>
+      <ion-label>{{group?.name}}</ion-label>
     </ion-item>
-
   </ion-list>
+  <ion-card>
+    <ion-card-title>Create new Group:</ion-card-title>
+    <ion-card-content>
+      <add-group (addGroup)="addGroup($event)"></add-group>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
