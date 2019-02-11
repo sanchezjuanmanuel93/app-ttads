@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { GroupPage } from './group.page';
 import { ScoreComponent } from 'src/app/score/score.component';
+import { CreateTeamComponent } from 'src/app/team/create-team/create-team.component';
+import { AddGroupComponent } from '../add-group/add-group.component';
 
 const routes: Routes = [
   {
@@ -22,6 +24,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [GroupPage, ScoreComponent]
+  declarations: [GroupPage, ScoreComponent, CreateTeamComponent]
 })
 export class GroupPageModule { }

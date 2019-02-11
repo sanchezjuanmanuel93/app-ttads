@@ -11,8 +11,15 @@
   <ion-label>Equipos</ion-label>
   <ion-item *ngFor="let team of group.teams" [routerLink]="'/team/' + team.id" routerDirection="forward">
     <ion-icon slot="start" color="medium" name="book"></ion-icon>
-    <ion-label>{{team.name}}</ion-label>
+    <ion-label>{{team?.name}}</ion-label>
   </ion-item>
+
+  <ion-card>
+    <ion-card-title>Create new Team:</ion-card-title>
+    <ion-card-content>
+      <create-team (addTeam)="addTeam($event)"></create-team>
+    </ion-card-content>
+  </ion-card>
 
   <ion-label>Partidos</ion-label>
   <ion-item *ngFor="let match of group.matches">

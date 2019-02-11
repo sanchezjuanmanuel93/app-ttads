@@ -8,9 +8,9 @@ import { GroupsService } from '../services/groups.service';
 })
 export class GroupsPage implements OnInit {
 
-  private groups: any;
+  groups: any;
 
-  constructor(private groupsService: GroupsService) { }
+  constructor(public groupsService: GroupsService) { }
 
   ngOnInit() {
     this.groupsService.getGroups().subscribe((groups) => {

@@ -8,9 +8,16 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-label>Equipos</ion-label>
+  <ion-label>Players</ion-label>
   <ion-item *ngFor="let player of team.players">
     <ion-icon slot="start" color="medium" name="book"></ion-icon>
     <ion-label>{{player.name}}</ion-label>
   </ion-item>
+
+  <ion-card>
+    <ion-card-title>Create new Player:</ion-card-title>
+    <ion-card-content>
+      <create-player (addPlayerToTeam)="addPlayer($event)"></create-player>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

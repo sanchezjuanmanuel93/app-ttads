@@ -9,11 +9,11 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MatchPage {
 
-  private match: any;
+  match: any;
 
   constructor(
-    private route: ActivatedRoute,
-    private matchesService: MatchesService
+    public route: ActivatedRoute,
+    public matchesService: MatchesService
   ) {
 
     this.getMatches();

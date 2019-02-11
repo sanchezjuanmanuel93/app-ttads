@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Group } from '../models/group';
-import { Observable } from 'rxjs';
+import { Team } from '../models/team';
 
 @Injectable({
   providedIn: 'root'
@@ -18,10 +18,15 @@ export class GroupsService {
   }
 
   getGroup(id: any) {
-    return this.http.get(this.url + "/" + id);
+    return this.http.get<Group>(this.url + "/" + id);
   }
 
   save(group: Group) {
     return this.http.post(this.url, group);
   }
+
+  addTeamToGroup(group: Group, team: Team) {
+    return this.http.put(this.url + "/" + group.id + "/teams/" + team.id, {});
+  }
+
 }

@@ -1,8 +1,9 @@
 export class Group {
-    _id: string;
+    id: string;
     name: string;
 
     teams: any = [];
+    matches: any = [];
 
     constructor(group?: any) {
         if (typeof group !== 'undefined' && group !== null) {
