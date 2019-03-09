@@ -9,7 +9,7 @@ import { Team } from '../models/team';
 })
 export class GroupsService {
 
-  private url = environment.UrlApi + "group";
+  private url = `${environment.UrlApi}/group`
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class GroupsService {
   }
 
   getGroup(id: any) {
-    return this.http.get<Group>(this.url + "/" + id);
+    return this.http.get<Group>(`${this.url}/${id}`);
   }
 
   save(group: Group) {
@@ -26,7 +26,7 @@ export class GroupsService {
   }
 
   addTeamToGroup(group: Group, team: Team) {
-    return this.http.put(this.url + "/" + group.id + "/teams/" + team.id, {});
+    return this.http.put(`${this.url}/${group.id}/teams/${team.id}`, {});
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TeamService } from '../services/team.service';
 import { Player } from '../models/player';
@@ -9,20 +9,15 @@ import { Team } from '../models/team';
   templateUrl: './team.page.html',
   styleUrls: ['./team.page.scss'],
 })
-export class TeamPage implements OnInit {
+export class TeamPage {
 
   team: Team;
 
-  constructor(
-    private teamService: TeamService,
-    private route: ActivatedRoute
-  ) { }
-
-  ngOnInit() {
-    this.getGroups();
+  constructor( private teamService: TeamService, private route: ActivatedRoute) {
+    this.getTeam();
   }
 
-  getGroups() {
+  getTeam() {
     let id = this.route.snapshot.paramMap.get('id');
     this.teamService.getTeam(id).subscribe((team: Team) => {
       this.team = team;

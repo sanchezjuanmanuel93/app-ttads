@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MatchesService {
 
-  private url = environment.UrlApi + "match";
+  private url = `${environment.UrlApi}/match`;
 
 
   constructor(private http: HttpClient) {
@@ -15,7 +15,7 @@ export class MatchesService {
   }
 
   getMatch(id: any) {
-    return this.http.get(this.url + "/" + id);
+    return this.http.get(`${this.url}/${id}`);
   }
 
 

@@ -11,13 +11,8 @@ export class MatchPage {
 
   match: any;
 
-  constructor(
-    public route: ActivatedRoute,
-    public matchesService: MatchesService
-  ) {
-
+  constructor (public route: ActivatedRoute, public matchesService: MatchesService) {
     this.getMatches();
-
   }
 
   getMatches() {

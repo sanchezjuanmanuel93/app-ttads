@@ -8,7 +8,7 @@ import { Team } from '../models/team';
 })
 export class TeamService {
 
-  private url = environment.UrlApi + "team";
+  private url = `${environment.UrlApi}/team`;
 
   constructor(private http: HttpClient) { }
 
@@ -17,11 +17,11 @@ export class TeamService {
   }
 
   getTeam(id: any) {
-    return this.http.get<Team>(this.url + "/" + id);
+    return this.http.get<Team>(`${this.url}/${id}`);
   }
 
   addPlayer(team: Team, player: any) {
-    return this.http.put(this.url + "/" + team.id + "/players/" + player.id, {});
+    return this.http.put(`${this.url}/${team.id}/players/${player.id}`, {});
   }
 
   save(team: Team) {

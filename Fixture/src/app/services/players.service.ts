@@ -8,7 +8,7 @@ import { Player } from '../models/player';
 })
 export class PlayersService {
 
-  private url = environment.UrlApi + "player";
+  private url = `${environment.UrlApi}/player`;
 
 
   constructor(private http: HttpClient) { }
