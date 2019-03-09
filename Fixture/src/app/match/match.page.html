@@ -1,18 +1,21 @@
 <ion-header>
   <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
     <ion-title>{{match.team1.name}} - {{match.team2.name}} </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <div className="match-details">
-    <div>
-      <h2>{{match.team1.name}}({{match.goals1.length}})</h2>
-      <span *ngFor="let goal of match.goals1"><b>{{goal.player.name}}</b> {{goal.time}}&apos;</span>
+  <div class="match-details">
+    <div class="column">
+      <h2>{{match.team1.name}} ({{match.goals1.length}})</h2>
+      <p *ngFor="let goal of match.goals1"><b>{{goal.player.name}}</b> {{goal.time}}&apos;</p>
     </div>
-    <div>
-      <h2>{{match.team2.name}}({{match.goals2.length}})</h2>
-      <span *ngFor="let goal of match.goals2"><b>{{goal.player.name}}</b> {{goal.time}}&apos;</span>
+    <div class="column">
+      <h2>{{match.team2.name}} ({{match.goals2.length}})</h2>
+      <p *ngFor="let goal of match.goals2"><b>{{goal.player.name}}</b> {{goal.time}}&apos;</p>
     </div>
   </div>
 </ion-content>

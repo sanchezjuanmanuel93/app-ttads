@@ -1,3 +1,8 @@
-<ion-input [(ngModel)]="name" placeholder="Team Name"></ion-input>
-<ion-input [(ngModel)]="code" placeholder="Team Code"></ion-input>
-<ion-button (click)="save()">Save</ion-button>
+<ion-card>
+    <ion-card-title class="title">Crear Equipo</ion-card-title>
+    <ion-card-content>
+        <ion-input [(ngModel)]="name" placeholder="nombre del equipo"></ion-input>
+        <ion-input [(ngModel)]="code" placeholder="codigo del equipo"></ion-input>
+        <ion-button (click)="save()">Guardar</ion-button>
+    </ion-card-content>
+</ion-card>

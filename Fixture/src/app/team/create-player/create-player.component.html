@@ -1,2 +1,7 @@
-<ion-input [(ngModel)]="name" placeholder="Player Name"></ion-input>
-<ion-button (click)="save()">Save</ion-button>
+<ion-card>
+    <ion-card-title class="title">Crear Jugador</ion-card-title>
+    <ion-card-content>
+        <ion-input [(ngModel)]="name" placeholder="nombre del jugador"></ion-input>
+        <ion-button (click)="save()">Guardar</ion-button>
+    </ion-card-content>
+</ion-card>

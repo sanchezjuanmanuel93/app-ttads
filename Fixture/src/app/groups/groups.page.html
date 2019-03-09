@@ -1,22 +1,18 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Groups
+      Mundial Rusia 2018
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
   <ion-list>
+    <ion-label>Grupos</ion-label>
     <ion-item *ngFor="let group of groups" [routerLink]="'/group/' + group.id" routerDirection="forward">
-      <ion-icon slot="start" color="medium" name="book"></ion-icon>
+      <ion-icon slot="start" color="medium" name="flag"></ion-icon>
       <ion-label>{{group?.name}}</ion-label>
     </ion-item>
   </ion-list>
-  <ion-card>
-    <ion-card-title>Create new Group:</ion-card-title>
-    <ion-card-content>
-      <add-group (addGroup)="addGroup($event)"></add-group>
-    </ion-card-content>
-  </ion-card>
+    <add-group (addGroup)="addGroup($event)"></add-group>
 </ion-content>

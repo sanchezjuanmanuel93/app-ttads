@@ -1,2 +1,8 @@
-<ion-input [(ngModel)]="name" placeholder="Group Name"></ion-input>
-<ion-button (click)="save()">Save</ion-button>
+<ion-card>
+    <ion-card-title class="title">Crear Grupo</ion-card-title>
+    <ion-card-content>
+        <ion-input [(ngModel)]="name" placeholder="nombre del grupo"></ion-input>
+        <ion-button (click)="save()">Guardar</ion-button>
+    </ion-card-content>
+</ion-card>
+

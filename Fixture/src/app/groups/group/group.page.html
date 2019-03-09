@@ -10,20 +10,16 @@
 <ion-content padding>
   <ion-label>Equipos</ion-label>
   <ion-item *ngFor="let team of group.teams" [routerLink]="'/team/' + team.id" routerDirection="forward">
-    <ion-icon slot="start" color="medium" name="book"></ion-icon>
+    <ion-icon slot="start" color="medium" name="man"></ion-icon>
     <ion-label>{{team?.name}}</ion-label>
   </ion-item>
 
-  <ion-card>
-    <ion-card-title>Create new Team:</ion-card-title>
-    <ion-card-content>
-      <create-team (addTeam)="addTeam($event)"></create-team>
-    </ion-card-content>
-  </ion-card>
+  <create-team (addTeam)="addTeam($event)"></create-team>
 
   <ion-label>Partidos</ion-label>
-  <ion-item *ngFor="let match of group.matches">
-    <app-score [match]="match"></app-score>
+  <ion-item *ngFor="let match of group.matches" [routerLink]="'/match/' + match.id" routerDirection="forward">
+    <ion-icon slot="start" color="medium" name="football"></ion-icon>
+    <ion-label>{{match.team1.name}} {{match.score1}} - {{match.score2}} {{match.team2.name}}</ion-label>
   </ion-item>
 
 </ion-content>
